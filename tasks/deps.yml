@@ -18,7 +18,7 @@
       - unzip
       - telnet
       - ntp
-      - python-pip
+      - python3-pip
       - locales
       - apt-transport-https
       - lsof
@@ -26,8 +26,8 @@
       - zip
       - nfs-common
       - acl
-      - python-boto3
-      - python-botocore
+      - python3-boto3
+      - python3-botocore
   when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
 
 - name: Debian 8 | Install list of packages
@@ -53,10 +53,10 @@
       - unzip
       - ed
       - libselinux-python
-      - python-setuptools
+      - python3-setuptools
       - nfs-utils
-      - python-boto3
-      - python-botocore
+      - python3-boto3
+      - python3-botocore
   when: ansible_distribution == 'CentOS' or ansible_distribution == 'Red Hat Enterprise Linux' or ansible_distribution == 'RedHat'
 
 - name: Centos | Install pip via easy_install
