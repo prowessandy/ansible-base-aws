@@ -18,7 +18,6 @@
       - unzip
       - telnet
       - ntp
-      - python-pip
       - locales
       - apt-transport-https
       - lsof
