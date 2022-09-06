@@ -26,6 +26,7 @@
       - nfs-common
       - acl
       - python3
+      - python3-pip
       - python3-boto3
       - python3-botocore
   ignore_errors: yes
@@ -34,7 +35,7 @@
 - name: Debian | Install pip3 packages
   shell: sudo python3 -m pip install --upgrade pip
   ignore_errors: yes
-  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+  when: ansible_distribution == 'Ubuntu' and ansible_distribution_version == "20.04"
   
 - name: Debian 8 | Install list of packages
   apt:
